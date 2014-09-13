@@ -30,6 +30,11 @@ void Metro::interval(unsigned long interval_millis)
 
 bool Metro::check()
 {
+  return this->passed();
+}
+
+bool Metro::passed()
+{
 
   unsigned long now = millis();
   

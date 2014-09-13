@@ -37,6 +37,7 @@ public:
   Metro(unsigned long interval_millis);
   void interval(unsigned long interval_millis);
   bool check();
+  bool passed();
   void reset();
 	
 private:
