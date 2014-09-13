@@ -28,14 +28,14 @@ void Metro::interval(unsigned long interval_millis)
   this->interval_millis = interval_millis;
 }
 
-uint8_t Metro::check()
+bool Metro::check()
 {
 
   unsigned long now = millis();
   
   if ( interval_millis == 0 ){
     previous_millis = now;
-	return 1;
+	return true;
   }
  
   if ( (now - previous_millis) >= interval_millis) {
@@ -44,10 +44,10 @@ uint8_t Metro::check()
 	#else
 	previous_millis += interval_millis ; 
 	 #endif
-    return 1;
+    return true;
   }
   
-  return 0;
+  return false;
 
 }
 
