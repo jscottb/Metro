@@ -9,3 +9,5 @@ Download the latest version here : https://github.com/thomasfredericks/Metro-Ard
 
 Documentation can be found here : https://github.com/thomasfredericks/Metro-Arduino-Wiring/wiki
 
+
+This fork changes the directory structure so you can use it as a Git submodule.
