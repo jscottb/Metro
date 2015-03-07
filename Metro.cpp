@@ -32,7 +32,7 @@ bool Metro::expired() const
 // When a check is true, it resets the timer to the current time.
 bool Metro::check()
 {
-	int now = millis();
+	unsigned long now = millis();
 
 	if (this->expired())
 	{
@@ -63,6 +63,11 @@ bool Metro::running() const
 void Metro::reset() 
 {
   this->previous_millis = millis();
+}
+
+long Metro::time_remaining() const
+{
+	return millis() - this->previous_millis;
 }
 
 

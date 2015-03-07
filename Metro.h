@@ -41,8 +41,9 @@ public:
   bool expired() const;
   bool running() const;
   void reset();
+  long time_remaining() const;
 	
-private:
+public:
   unsigned long  previous_millis, interval_millis;
 
 };
