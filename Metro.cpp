@@ -55,7 +55,7 @@ bool Metro::checkCatchUp()
 	return 0;
 }
 
-bool Metro::running()
+bool Metro::running() const
 {
 	return !this->expired();
 }
