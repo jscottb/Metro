@@ -67,7 +67,7 @@ void Metro::reset()
 
 long Metro::time_remaining() const
 {
-	return millis() - this->previous_millis;
+	return max((this->previous_millis + this->interval_millis) - millis(), 0);
 }
 
 
