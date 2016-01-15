@@ -15,3 +15,5 @@ check()	        -- if the timer is expired, resets the time by updating the base
 expired()	-- simply checks the timer and returns true or false.
 checkCatchUp()  -- if the timer is expired, increments the base time by the interval. Reduces buildup of lag.
 running()	-- if the timer is still running, returns true.
+
+Forked for Particle.io board use. Scott Beasley 2016.
