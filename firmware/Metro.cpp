@@ -1,13 +1,7 @@
-
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
 #include "Metro.h"
 
 Metro::Metro(unsigned long interval_millis)
-{   
+{
 	interval(interval_millis);
 	reset();
 }
@@ -24,8 +18,8 @@ bool Metro::expired() const
 {
   if (millis() - this->previous_millis >= this->interval_millis)
     return 1;
-  else  
-  	return 0;
+  else
+  	 return 0;
 }
 
 // Original check behavior:
@@ -39,7 +33,7 @@ bool Metro::check()
 		this->previous_millis = now;
 		return 1;
 	}
-	else 
+	else
 		return 0;
 }
 
@@ -60,7 +54,7 @@ bool Metro::running() const
 	return !this->expired();
 }
 
-void Metro::reset() 
+void Metro::reset()
 {
   this->previous_millis = millis();
 }
@@ -69,5 +63,3 @@ long Metro::time_remaining() const
 {
 	return max((this->previous_millis + this->interval_millis) - millis(), 0);
 }
-
-
