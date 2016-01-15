@@ -1,3 +1,4 @@
+#include <application.h>
 #include "Metro.h"
 
 Metro::Metro(unsigned long interval_millis)
