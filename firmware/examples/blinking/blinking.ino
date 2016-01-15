@@ -1,5 +1,5 @@
 /*
- This code will blink an LED attached to pin 13 on and off.
+ This code will blink an LED attached to pin 7 on and off.
  It will stay on for 0.25 seconds.
  It will stay off for 1 second.
  */
